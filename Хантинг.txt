@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление фермой для хантинга ключей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Управление фермой для хантинга ключей</h1>
+    </header>
+
+    <section>
+        <h2>Статус фермы</h2>
+        <p>Общее количество ключей: <span id="totalKeys">0</span></p>
+        <p>Активных задач: <span id="activeTasks">0</span></p>
+        <button onclick="startHunting()">Запустить хантинг</button>
+        <button onclick="stopHunting()">Остановить хантинг</button>
+    </section>
+
+    <section>
+        <h2>Список ключей</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hunter List</th>
+                    <th>Hunting Speed</th>
+                    <th>Temp</th>
+                    <th>Hunted Keys</th>
+                    <th>Errors</th>
+                    <th>Found</th>
+                    <th>Actions</th>
+                    <th><!-- Значение для Hunting Speed --></th>
+                    <th><!-- Значение для Hunting Speed --></th>
+                    <th>Status</th>
+
+                </tr>
+            </thead>
+            <tbody id="keyList">
+                <tr>
+                    <td>Hunter 1</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 3300 4 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>60</td>
+                    <td>33223</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>Restart</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 3300 4 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>56</td>
+                    <td>2323</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>Setkey</td>
+                    <td>Reboot</td>
+                    <td>Online</td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 4300 6 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>70</td>
+                    <td>2323</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>SetlMG</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <tr>
+                    <th>Hunter List</th>
+                    <th>Hunting Speed</th>
+                    <th>Temp</th>
+                    <th>Hunted Keys</th>
+                    <th>Errors</th>
+                    <th>Found</th>
+                    <th>Actions</th>
+                    <th><!-- Значение для Hunting Speed --></th>
+                    <th><!-- Значение для Hunting Speed --></th>
+                    <th>Status</th>
+
+                </tr>
+            </thead>
+            <tbody id="keyList">
+                <tr>
+                    <td>Hunter 2</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 3300 4 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>60</td>
+                    <td>33223</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>Restart</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 3300 4 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>56</td>
+                    <td>2323</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>Setkey</td>
+                    <td>Reboot</td>
+                    <td>Offline 5h</td>
+                    
+                </tr>
+                <tr>
+                    <td>Radeon XT 4300 6 GB</td>
+                    <td>3600 GH/s</td>
+                    <td>70</td>
+                    <td>2323</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td><button>start/stop</button></td>
+                    <td>SetlMG</td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    <td><!-- Значение для Hunting Speed --></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<footer>
+        <p>&copy; 2024 Управление фермой для хантинга ключей</p>
+    </footer>
+    <script> 
+    </script>
+
+</body>
+
+</html>
